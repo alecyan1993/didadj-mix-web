@@ -16,8 +16,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/mixer" element={<DJMixer />} />
+          <Route path="/" element={<DJMixer />} />
+          {/* Optional: Keep intro page at /intro if needed later */}
+          {/* <Route path="/intro" element={<Index />} /> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
