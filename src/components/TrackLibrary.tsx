@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import TrackCard, { Track } from "./TrackCard";
 import { demoAPI } from "@/lib/api";
 import { toast } from "sonner";
+import { mockTracks } from "@/data/mockTracks";
 
 interface TrackLibraryProps {
   onTrackDragStart?: (e: React.DragEvent, track: Track) => void;
@@ -39,20 +40,10 @@ const TrackLibrary = ({ onTrackDragStart }: TrackLibraryProps) => {
       
       setTracks(formattedTracks);
     } catch (error) {
-      console.error("Failed to load tracks:", error);
-      toast.error("无法加载音乐库");
-      // 使用默认数据作为后备
-      setTracks([
-        {
-          id: "1",
-          title: "混搭 LONELY SOBER",
-          artist: "暗夜男孩",
-          duration: "3:30",
-          bpm: 128,
-          genre: "Electronic",
-          artwork: "/api/demo/music/covers/track1.jpg"
-        }
-      ]);
+      console.error("Failed to load tracks from API, using mock data:", error);
+      // 使用完整的模拟数据
+      setTracks(mockTracks);
+      toast.info("使用样例数据展示");
     } finally {
       setLoading(false);
     }
