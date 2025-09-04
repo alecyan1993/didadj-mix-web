@@ -1,5 +1,10 @@
 import { Track } from "@/components/TrackCard";
 
+// 使用更可靠的音频URL或本地文件
+// 注意：这些是示例URL，实际使用时应替换为你自己的音频文件
+const AUDIO_BASE_URL = "https://www.mfiles.co.uk/mp3-downloads/";
+const LOCAL_AUDIO_BASE = "/audio/";
+
 export const mockTracks: Track[] = [
   {
     id: "track1",
@@ -9,7 +14,7 @@ export const mockTracks: Track[] = [
     bpm: 128,
     genre: "Electronic",
     artwork: "https://picsum.photos/seed/track1/200/200",
-    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    audioUrl: `${AUDIO_BASE_URL}brahms-st-anthony-chorale-theme-two-pianos.mp3`
   },
   {
     id: "track2", 
@@ -19,7 +24,7 @@ export const mockTracks: Track[] = [
     bpm: 130,
     genre: "Electronic",
     artwork: "https://picsum.photos/seed/track2/200/200",
-    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+    audioUrl: `${AUDIO_BASE_URL}chopin-nocturne-op9-no2.mp3`
   },
   {
     id: "track3",
@@ -29,7 +34,7 @@ export const mockTracks: Track[] = [
     bpm: 126,
     genre: "Electronic",
     artwork: "https://picsum.photos/seed/track3/200/200",
-    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+    audioUrl: `${AUDIO_BASE_URL}beethoven-symphony-5-1st-movement.mp3`
   },
   {
     id: "track4",
@@ -39,7 +44,7 @@ export const mockTracks: Track[] = [
     bpm: 125,
     genre: "Electronic",
     artwork: "https://picsum.photos/seed/track4/200/200",
-    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+    audioUrl: `${AUDIO_BASE_URL}mozart-symphony-no-40-1st-movement.mp3`
   },
   {
     id: "track5",
@@ -49,7 +54,7 @@ export const mockTracks: Track[] = [
     bpm: 132,
     genre: "Electronic",
     artwork: "https://picsum.photos/seed/track5/200/200",
-    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+    audioUrl: `${AUDIO_BASE_URL}vivaldi-spring-1st-movement.mp3`
   },
   {
     id: "track6",
@@ -59,7 +64,7 @@ export const mockTracks: Track[] = [
     bpm: 124,
     genre: "House",
     artwork: "https://picsum.photos/seed/track6/200/200",
-    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+    audioUrl: `${AUDIO_BASE_URL}bach-invention-no-1.mp3`
   },
   {
     id: "track7",
@@ -69,7 +74,7 @@ export const mockTracks: Track[] = [
     bpm: 118,
     genre: "Synthwave",
     artwork: "https://picsum.photos/seed/track7/200/200",
-    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"
+    audioUrl: `${AUDIO_BASE_URL}grieg-peer-gynt-morning-mood.mp3`
   },
   {
     id: "track8",
@@ -79,7 +84,7 @@ export const mockTracks: Track[] = [
     bpm: 140,
     genre: "Hip Hop",
     artwork: "https://picsum.photos/seed/track8/200/200",
-    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
+    audioUrl: `${AUDIO_BASE_URL}debussy-clair-de-lune.mp3`
   }
 ];
 

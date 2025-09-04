@@ -17,6 +17,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DJMixer />} />
+          <Route path="/mixer" element={<DJMixer />} />
+          <Route path="/mix" element={<DJMixer />} />
           {/* Optional: Keep intro page at /intro if needed later */}
           {/* <Route path="/intro" element={<Index />} /> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
